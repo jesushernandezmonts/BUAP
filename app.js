@@ -276,6 +276,28 @@ Me gustaría que un desarrollador de la BUAP revise los detalles de mi caso. ¡M
         });
     }
 
+    // 4. Scroll Reveal Animation Logic
+    const observerOptions = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('appear');
+                // Once it appears, we don't need to observe it anymore
+                scrollObserver.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Initial check for elements and start observing
+    const animateElements = document.querySelectorAll('.animate-on-scroll');
+    animateElements.forEach(el => {
+        scrollObserver.observe(el);
+    });
+
     if (btnCloseNotification) {
         btnCloseNotification.addEventListener('click', () => {
             formNotification.classList.remove('active');
