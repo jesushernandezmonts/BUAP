@@ -261,15 +261,22 @@ Me gustaría que un desarrollador de la BUAP revise los detalles de mi caso. ¡M
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
-            // Read form inputs just to compose a message if wanted
+            // Read form inputs
             const name = document.getElementById('client-name').value;
-            const email = document.getElementById('client-email').value;
             const service = document.getElementById('service-select').options[document.getElementById('service-select').selectedIndex].text;
             const details = document.getElementById('project-details').value;
-            const isBuap = document.getElementById('client-buap').checked;
+            const tutor = document.getElementById('tutor-select').value;
             
-            // Print a simulator log
-            console.log(`Solicitud de ${name} (${email}) recibida. Servicio: ${service}. Descuento Lobo: ${isBuap ? 'Sí' : 'No'}. Detalles: ${details}`);
+            const whatsappNumbers = {
+                'jesus': '522471742262',
+                'edgar': '525511338065'
+            };
+            
+            const phoneNumber = whatsappNumbers[tutor];
+            const message = `Hola, soy ${name}. Me interesa el servicio de: ${service}.\n\n*Detalles:*\n${details}`;
+            
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
             
             // Show custom success popup modal
             formNotification.classList.add('active');

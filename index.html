@@ -583,16 +583,11 @@ optimizar_procesos(negocio)</code></pre>
                         <div class="form-group">
                             <label class="form-label">Lenguaje de Programación:</label>
                             <select id="hw-lang" class="form-select">
-                                <option value="basic" data-price="50">C / C++ (Estructuras de control básicas,
-                                    punteros)</option>
-                                <option value="oop" data-price="80">Java / C# (Programación Orientada a Objetos, GUIs
-                                    con Swing/JavaFX)</option>
-                                <option value="data" data-price="100">Python (Ciencia de datos básica, Pandas, NumPy,
-                                    Scripts)</option>
-                                <option value="web" data-price="80">HTML / CSS / JavaScript (Frontend y maquetación
-                                    web)</option>
-                                <option value="complex" data-price="150">Estructuras de Datos Avanzadas, Árboles,
-                                    Grafos, Base de Datos SQL</option>
+                                <option value="basic" data-price="100">C / C++ (Estructuras de control, punteros, memoria dinámica)</option>
+                                <option value="oop" data-price="150">Java / C# (POO, GUIs Swing/JavaFX, Conexión a BD, Patrones)</option>
+                                <option value="data" data-price="200">Python (Data Science, Pandas, NumPy, Scikit-Learn, Web Scraping)</option>
+                                <option value="web" data-price="150">Web (HTML/CSS/JS, React, Node.js, APIs RESTful, Auth)</option>
+                                <option value="complex" data-price="300">Avanzado (Estructuras de Datos, Árboles, Grafos, SQL Avanzado)</option>
                             </select>
                         </div>
 
@@ -690,7 +685,7 @@ optimizar_procesos(negocio)</code></pre>
                     <div class="price-display-wrapper">
                         <span class="currency">MXN</span>
                         <div class="price-amount" id="estimated-price">$800.00</div>
-                        <span class="price-approx">*Cálculo aproximado*</span>
+                        <span class="price-approx">*Cálculo aproximado. El presupuesto final se realizará al comunicarte por WhatsApp.*</span>
                     </div>
 
 
@@ -886,20 +881,7 @@ optimizar_procesos(negocio)</code></pre>
                             </div>
                         </div>
 
-                        <div class="method-item">
-                            <div class="method-icon">
-                                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
-                                    fill="none">
-                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                    <circle cx="12" cy="10" r="3"></circle>
-                                </svg>
-                            </div>
-                            <div>
-                                <div class="method-label">Ubicación Física</div>
-                                <span class="method-link text-light">Facultad de Ciencias de la Computación, Ciudad
-                                    Universitaria BUAP, Puebla, Pue.</span>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
 
@@ -945,7 +927,13 @@ optimizar_procesos(negocio)</code></pre>
                                 required></textarea>
                         </div>
 
-
+                        <div class="form-group">
+                            <label class="form-label" for="tutor-select">¿A quién deseas enviar tu solicitud?</label>
+                            <select id="tutor-select" class="form-select">
+                                <option value="jesus">Jesús (Full Stack Developer)</option>
+                                <option value="edgar">Edgar (Backend & Arquitecto)</option>
+                            </select>
+                        </div>
 
                         <button type="submit" class="btn btn-primary btn-block">
                             <span>Enviar Solicitud</span>
@@ -982,32 +970,7 @@ optimizar_procesos(negocio)</code></pre>
                         Red de programadores y estudiantes de la Benemérita Universidad Autónoma de Puebla impulsando la
                         transformación digital local de emprendedores, Pymes y la excelencia escolar.
                     </p>
-                    <div class="footer-socials">
-                        <a href="#" aria-label="Facebook">
-                            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
-                                fill="none">
-                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                            </svg>
-                        </a>
-                        <a href="#" aria-label="GitHub">
-                            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
-                                fill="none">
-                                <path
-                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                </path>
-                            </svg>
-                        </a>
-                        <a href="#" aria-label="LinkedIn">
-                            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
-                                fill="none">
-                                <path
-                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
-                                </path>
-                                <rect x="2" y="9" width="4" height="12"></rect>
-                                <circle cx="4" cy="4" r="2"></circle>
-                            </svg>
-                        </a>
-                    </div>
+
                 </div>
 
                 <div class="footer-links-col">
