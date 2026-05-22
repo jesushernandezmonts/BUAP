@@ -953,6 +953,8 @@ a {
     padding: clamp(20px, 4vw, 40px);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .tabs-header {
@@ -1034,6 +1036,7 @@ a {
 /* Custom form fields */
 .form-select, .form-input, .form-textarea {
     width: 100%;
+    max-width: 100%;
     padding: 14px;
     background-color: rgba(7, 10, 19, 0.5);
     border: var(--border-glass);
@@ -1042,6 +1045,12 @@ a {
     font-family: 'Outfit', sans-serif;
     font-size: 15px;
     transition: var(--transition-fast);
+}
+
+.form-select {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .form-select:focus, .form-input:focus, .form-textarea:focus {
