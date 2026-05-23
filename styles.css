@@ -2111,3 +2111,89 @@ a {
         font-size: 36px;
     }
 }
+
+@media (max-width: 400px) {
+    .container {
+        padding: 0 15px; /* Ganar espacio lateral máximo */
+    }
+
+    .calc-controls-card, .calc-result-card {
+        padding: 18px 12px; /* Reducir padding interno al mínimo seguro */
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .tabs-header {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 2 columnas para que no desborden */
+        gap: 6px;
+        padding: 4px;
+        background-color: rgba(7, 10, 19, 0.3);
+    }
+
+    .tab-btn {
+        padding: 10px 5px;
+        font-size: 11px;
+        flex-direction: column; /* Icono arriba, texto abajo para ahorrar ancho */
+        gap: 4px;
+        height: auto;
+        text-align: center;
+    }
+    
+    .tab-icon {
+        font-size: 16px;
+    }
+
+    .range-slider-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+    
+    .slider-val {
+        min-width: 0;
+        text-align: center;
+        background-color: rgba(0, 240, 255, 0.05);
+        padding: 4px;
+        border-radius: 4px;
+    }
+    
+    .price-amount {
+        font-size: 26px;
+    }
+
+    .meta-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+}
+
+@media (max-width: 380px) {
+    .container {
+        padding: 0 16px; /* Reducir aún más el padding lateral */
+    }
+    
+    h1 {
+        font-size: 28px; /* Forzar tamaño más pequeño para evitar saltos de línea feos */
+    }
+    
+    .hero-stats {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .price-amount {
+        font-size: 28px;
+    }
+    
+    .tab-btn {
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+    
+    .project-title {
+        font-size: 18px;
+    }
+}

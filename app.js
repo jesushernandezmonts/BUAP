@@ -102,6 +102,11 @@ document.addEventListener('DOMContentLoaded', () => {
             };
             summaryCategoryEl.textContent = labelMap[target] || target;
             
+            // PostHog Event: Tab Switched
+            if (window.posthog) {
+                posthog.capture('calculator_tab_switched', { category: target });
+            }
+            
             calculatePrice();
         });
     });
@@ -251,6 +256,18 @@ Me gustaría que un desarrollador de la BUAP revise los detalles de mi caso. ¡M
     // Run initial calculation
     calculatePrice();
 
+    // PostHog Event: Click on WhatsApp Quote
+    if (btnQuoteWhatsapp) {
+        btnQuoteWhatsapp.addEventListener('click', () => {
+            if (window.posthog) {
+                posthog.capture('whatsapp_quote_clicked', {
+                    category: activeCategory,
+                    estimated_price: estimatedPriceEl.textContent
+                });
+            }
+        });
+    }
+
 
     // 4. Contact Form Submission handler & Modal
     const contactForm = document.getElementById('contactForm');
@@ -263,10 +280,19 @@ Me gustaría que un desarrollador de la BUAP revise los detalles de mi caso. ¡M
             
             // Read form inputs
             const name = document.getElementById('client-name').value;
-            const service = document.getElementById('service-select').options[document.getElementById('service-select').selectedIndex].text;
+            const serviceSelect = document.getElementById('service-select');
+            const service = serviceSelect.options[serviceSelect.selectedIndex].text;
             const details = document.getElementById('project-details').value;
             const tutor = document.getElementById('tutor-select').value;
             
+            // PostHog Event: Contact Form Submitted
+            if (window.posthog) {
+                posthog.capture('contact_form_submitted', {
+                    service_selected: service,
+                    tutor_selected: tutor
+                });
+            }
+
             const whatsappNumbers = {
                 'jesus': '522471742262',
                 'edgar': '525511338065'
