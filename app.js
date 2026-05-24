@@ -234,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
         summaryTimeEl.textContent = timeEstimate;
         
         // Dynamically build and update WhatsApp link
-        const baseWhatsappUrl = 'https://wa.me/522221234567'; // Change this to your business WhatsApp
+        const baseWhatsappUrl = 'https://wa.me/522471742262'; // Change this to your business WhatsApp
         const whatsappText = `¡Hola! He cotizado un servicio en la web de BUAP Devs.
 *Detalles de mi solicitud:*
 - *Categoría:* ${summaryCategoryEl.textContent}
